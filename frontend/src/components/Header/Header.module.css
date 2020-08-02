@@ -1,0 +1,45 @@
+.Header{
+    height: 100vh;
+    background-image: url("https://images.unsplash.com/photo-1512485800893-b08ec1ea59b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+}
+
+.HeaderBackdrop{
+    background-color: rgba(2, 0, 0, 0.65);
+    height: 82vh;
+    width: 100vw;
+    padding-left: 10%;
+    padding-top: 10%;
+}
+
+.Description{
+    padding-right: 25%;
+    font-size: 1.5rem;
+    line-height: 1.7em;
+    color: white;
+    width: 40%;
+}
+
+.Description h1{
+    color: white;
+    font-size: 3.5rem;
+    line-height: 0.5em;
+    padding-bottom: 20px;
+}
+
+
+.Start{
+    margin-top: 20px;
+    background-color:  #98ff98;
+    border: 1px solid #98ff98;
+    color: #121211;
+    font-size: 1em;
+    padding: 15px 15px;
+    border-radius: 15px
+}
+
+.Start:hover{
+    background-color: #98ff98;
+    color: #121211;
+    border-radius: 15px;
+    font-size: 1.1em;
+}

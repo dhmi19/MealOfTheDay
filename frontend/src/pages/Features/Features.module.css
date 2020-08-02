@@ -1,0 +1,15 @@
+.Features{
+    text-align: center;
+    height: 60vh;
+    background-color: #121211;
+    color: rgb(245, 245, 245);
+}
+
+.FeatureCards{
+    display: inline-flex;
+    justify-content: space-around;
+    align-self: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    color: #000;
+}
