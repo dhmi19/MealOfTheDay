@@ -1,8 +1,17 @@
 .Features{
     text-align: center;
-    height: 60vh;
     background-color: #121211;
     color: rgb(245, 245, 245);
+}
+
+.Features h1{
+    padding-top: 30px;
+    font-size: 3em;
+}
+
+.Subtitle{
+    font-size: 1.4em;
+    padding-bottom: 20px;
 }
 
 .FeatureCards{
@@ -12,4 +21,5 @@
     padding-left: 2%;
     padding-right: 2%;
     color: #000;
+    padding-bottom: 50px;
 }
