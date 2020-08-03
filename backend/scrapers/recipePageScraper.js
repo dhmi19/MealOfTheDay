@@ -1,13 +1,11 @@
 const puppeteer = require('puppeteer');
 
-const getRecipes = async () => {
+const getRecipes = async (url) => {
     let properties = {};
 
     const browser = await puppeteer.launch();
 
     const page = await browser.newPage();
-
-    const url = "https://www.kitchenstories.com/en/recipes/white-wine-baked-fish-with-sweet-potatoes";
 
     await page.goto(url);
 
