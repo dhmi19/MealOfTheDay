@@ -1,0 +1,24 @@
+.OptionCard{
+    border-radius: 20px;
+    border: 2px solid  #8A4D9E;
+    height: 200px;
+    width: 200px;
+    margin: 0px 20px;
+    padding: 5px 20px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+
+.Unselected{
+    background-color: transparent;
+    color: white;
+}
+
+.Selected{
+    background-color: #8A4D9E;
+    color: #98ff98;
+}

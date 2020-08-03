@@ -21,7 +21,7 @@ const FeatureCard = (props) => {
         >
             <h3>{props.title}</h3>
             <div className={classes.image}>
-                <img src={props.image}/>
+                <img src={props.image} alt={props.title}/>
             </div>
         </div>
     );

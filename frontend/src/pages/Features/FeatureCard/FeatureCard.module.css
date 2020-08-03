@@ -8,6 +8,7 @@
     flex: 1;
     width: 400px;
     box-sizing: border-box;
+    margin-top: 20px;
 }
 
 .FeatureCard:hover{
@@ -26,10 +27,11 @@
 }
 
 .image{
-    height: 100px;
-    width: 100px;
+    height: 50%;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
+    box-sizing: border-box;
 }
 
 .image img{

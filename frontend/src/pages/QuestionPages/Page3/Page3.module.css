@@ -1,0 +1,45 @@
+.Page3{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.Question{
+    text-align: center;
+    padding-top: 15%;
+    color: white;
+    font-size: 2em;
+}
+
+.Options{
+    display: flex;
+    padding-top: 50px;
+    justify-content: center;
+}
+
+.Button{
+    display: flex;
+    margin-top: 20px;
+    padding-top: 50px;
+    justify-content: center;
+}
+
+.Start{
+    border: 1px solid #98ff98;
+    color: #121211;
+    padding: 15px 15px;
+    border-radius: 15px;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    font-size: x-large;
+}
+
+.Enabled{
+    background-color: #98ff98;
+    font-size: x-large;
+}
+
+.Disabled{
+    display: none;
+}

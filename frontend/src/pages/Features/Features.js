@@ -1,9 +1,10 @@
 import React from 'react';
 import classes from './Features.module.css';
 import FeatureCard from './FeatureCard/FeatureCard';
-import Weather from '../../images/Weather.png';
 import Time from '../../images/Time.png';
+import Healthy from '../../images/Healthy.png';
 import Ingredients from '../../images/Ingredients.png';
+
 
 const Features = () => {
     return (
@@ -12,9 +13,9 @@ const Features = () => {
             <p className={classes.Subtitle}>We account for numerous factors to give you the perfect meal recommendation</p>
             <div className={classes.FeatureCards}>
                 <FeatureCard 
-                    title="Weather"
-                    description="Account for the weather, because who doesn't love a pinacolada on a sunny evening"
-                    image={Weather}
+                    title="Health"
+                    description="A delicious meal is not enough, it should be healthy too... or not once in while 🙃"
+                    image={Healthy}
                 />
                 <FeatureCard 
                     title="Time"
