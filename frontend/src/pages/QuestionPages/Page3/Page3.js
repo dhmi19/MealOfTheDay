@@ -3,14 +3,34 @@ import {Link} from 'react-router-dom';
 import classes from './Page3.module.css';
 import Typed from 'react-typed';
 import OptionCard from '../../../components/Shared/OptionCard/OptionCard';
+import {connect} from 'react-redux';
+import * as actionTypes from '../../../store/actions/questions';
 
-const Page3 = () => {
+const Page3 = (props) => {
 
     const [optionStatus, setOptionStatus] = useState([false, false, false]);
     const [enabled, setEnabled] = useState(true);
 
     const onSelectHandler = (number) => {
         let newState = [...optionStatus];
+
+        let answer = "";
+
+        switch(number-1){
+            case 0:
+                answer = "unhealthy";
+                break;
+            case 1: 
+                answer = "medium healthy";
+                break;
+            case 2: 
+                answer = "very healthy";
+                break;
+            default:
+                answer = "medium healthy";
+                break;
+        };
+
         console.log(number);
         for(var i = 0; i < newState.length; i++){
             if(i === number - 1){
@@ -19,7 +39,7 @@ const Page3 = () => {
                 newState[i] = false;
             }
         }
-        console.log(newState);
+        props.onAnswerAdded(answer, "question3");
         setOptionStatus(newState);
     }
 
@@ -77,4 +97,10 @@ const Page3 = () => {
     );
 };
 
-export default Page3;
+const mapDispatchToProps = dispatch => {
+    return{
+        onAnswerAdded : (answer, questionNumber) => dispatch(actionTypes.addAnswer(answer, questionNumber))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Page3);

@@ -2,16 +2,34 @@ import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import classes from './Page1.module.css';
 import Typed from 'react-typed';
+import * as actionTypes from '../../../store/actions/questions';
 import OptionCard from '../../../components/Shared/OptionCard/OptionCard';
+import {connect} from 'react-redux';
 
-const Page1 = () => {
+const Page1 = (props) => {
 
     const [optionStatus, setOptionStatus] = useState([false, false, false]);
     const [enabled, setEnabled] = useState(true);
 
     const onSelectHandler = (number) => {
         let newState = [...optionStatus];
-        console.log(number);
+        let answer = "";
+
+        switch(number-1){
+            case 0:
+                answer = "20 minutes";
+                break;
+            case 1: 
+                answer = "1 hour";
+                break;
+            case 2: 
+                answer = "no limit";
+                break;
+            default:
+                answer = "no limit";
+                break;
+        };
+
         for(var i = 0; i < newState.length; i++){
             if(i === number - 1){
                 newState[i] = true;
@@ -19,7 +37,7 @@ const Page1 = () => {
                 newState[i] = false;
             }
         }
-        console.log(newState);
+        props.onAnswerAdded(answer, "question1");
         setOptionStatus(newState);
     }
 
@@ -77,4 +95,16 @@ const Page1 = () => {
     );
 };
 
-export default Page1;
+/*const mapStateToProps = state => {
+    return{
+        question1: state.question1,
+    }
+}*/
+
+const mapDispatchToProps = dispatch => {
+    return{
+        onAnswerAdded : (answer, questionNumber) => dispatch(actionTypes.addAnswer(answer, questionNumber))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Page1);

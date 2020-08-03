@@ -1,5 +1,6 @@
 import React from 'react';
 import {Route, Switch, Redirect} from 'react-router-dom';
+
 import Home from './pages/Home/Home';
 import Layout from './hoc/Layout/Layout';
 import Page1 from './pages/QuestionPages/Page1/Page1';
