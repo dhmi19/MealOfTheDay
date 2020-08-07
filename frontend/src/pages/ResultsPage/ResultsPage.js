@@ -36,6 +36,11 @@ const ResultsPage = (props) => {
     }, [props.question1,props.question2,props.question3,sendRequest]);
 
 
+    const openRecipe = (href) => {
+        const fullURL = "https://www.kitchenstories.com" + href;
+        var win = window.open(fullURL, '_blank');
+    };
+
     let cardContent;
 
     if(error){
@@ -55,7 +60,7 @@ const ResultsPage = (props) => {
             );
         }else{
             cardContent = (
-                <div className={classes.ResultsCard}>
+                <div className={classes.ResultsCard} onClick={() => {openRecipe(answer.href)}}>
                     <div className={classes.Image}>
                         <img src={answer.imageURL} alt={answer.title}/>
                     </div>

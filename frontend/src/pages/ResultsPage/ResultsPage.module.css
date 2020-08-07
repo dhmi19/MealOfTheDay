@@ -23,6 +23,10 @@
     position: relative;
 }
 
+.ResultsCard:hover{
+    cursor: pointer;
+}
+
 .Image{
     background-color: blue;
     width: 100%;
