@@ -93,7 +93,9 @@ const getAnswer = async (criteria1, criteria2, criteria3) => {
     if(resultsCriteria2 === []){
         return dishOptions[0];
     }else{
-        return resultsCriteria2[0];
+        const result = resultsCriteria2[Math.floor(Math.random() * resultsCriteria2.length)];
+        console.log(result);
+        return result;
     }
 }
 
