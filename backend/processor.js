@@ -51,7 +51,9 @@ const checkCriteria2 = (dishData, criteria2) => {
 
 const getAnswer = async (criteria1, criteria2, criteria3) => {
     var url = "";
-
+    console.log(criteria1);
+    console.log(criteria2);
+    console.log(criteria3);
     if(criteria1 === "20 minutes"){
         url = "https://www.kitchenstories.com/en/categories/20-minute-meals?page=1";
     }

@@ -14,7 +14,7 @@ const ResultsPage = (props) => {
             let responseData = {};
             try{
                 responseData = await sendRequest(
-                    'http://localhost:5000/api/questions',
+                    "https://mealoftheday.herokuapp.com/api/questions",
                     'POST',
                     JSON.stringify({
                         question1: props.question1,
